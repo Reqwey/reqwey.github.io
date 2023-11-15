@@ -49,8 +49,6 @@
 			}
 		}
 
-		#st {}
-
 		.hide {
 			display: none;
 		}
@@ -59,8 +57,17 @@
 			display: initial;
 		}
 
+		.layout {
+			width: 100dvw;
+			height: 100dvh;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
 		.box {
-			margin-top: 60dvh;
+			margin-top: 70dvh;
 		}
 
 		/* 按钮的基础样式 */
@@ -119,17 +126,15 @@
 </head>
 
 <body>
-	<center>
-		<a href="#" target="_self">
-			<img id="op" src="/files/OP_s.png">
-		</a>
+	<div class="layout">
+		<img id="op" src="/files/OP_s.png">
 		<div class="box hide" id="st">
 			<div class="color-button" onclick="startManually()">
 				启动
 			</div>
 		</div>
 
-	</center>
+	</div>
 	<audio autoplay="true">
 		<source src="https://sf3-cdn-tos.douyinstatic.com/obj/ies-music/7295992607937792777.mp3">
 	</audio>
